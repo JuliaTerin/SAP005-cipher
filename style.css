@@ -1,0 +1,16 @@
+body{
+    background-color: #e3e6ebe3;
+  }
+  #fundo1{
+    width: 1350px;
+    height: 200px;
+    border: 1px solid;
+    background-image: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+h4 {
+    font-size: 2rem;
+    font-style: ;
+    padding-left: 60px;
+}
