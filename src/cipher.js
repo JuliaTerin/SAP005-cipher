@@ -4,7 +4,14 @@
 
 
 const cipher = {
-  // ...
+  //encode: function(offset, string)
+  //const firstAscii = 65
+  //const lastAscii = 97
+  //const alphabetSize = 26
+
 };
 
 export default cipher;
+
+/*(codigoDaLetra = desloc) % 26 que é o tam do alfabeto
+  ((codigoDaLetraASC - 65 + desloc) % 26) + 65
