@@ -1,8 +1,8 @@
 # Secretum
 
-Aplicação simples para codificação de senhas
+Aplicação simples para codificação de senhas.
 
-## Índice
+## :small_blue_diamond:Índice
 
 * [1. Intodução](#1-intodução)
 * [2. Planejamento](#2-planejamento)
