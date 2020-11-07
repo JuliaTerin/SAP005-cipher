@@ -7,12 +7,12 @@ buttonCod.addEventListener('click', functionCrip)
 
 function functionCrip(clickCod){ 
     clickCod.preventDefault();
-    const textValue = document.getElementById('text').value;
-    textValue = textValue.toUppeCase();
-    const desloca = parseInt(document.getElementById('offset').value)
-    let textCodificado = cipher.encode(textValue, desloca);
-    const textoSenha = document.getElementById('password').value = `${textCodificado}`;
-    textoSenha.innerHTML = textCodificado
+    let codificar = document.getElementById('text').value;
+    codificar = codificar.toUpperCase();
+    let desloca = parseInt(document.getElementById('offset').value);
+    let textEncode = cipher.encode(desloca,codificar);
+    document.getElementById('password').value = `${textEncode}`;
+    //textoSenha.innerHTML = textEncode
 }
 
 const buttonDescode = document.getElementById('descod')
@@ -20,11 +20,9 @@ buttonDescode.addEventListener('click', functionDescrip)
 
 function functionDescrip(clickDescod){
     clickDescod.preventDefault();
-    const decodificar = document.getElementById('text').value.toUppeCase()
-    decodificar = decodificar.toUppeCase();
-    //console.log(decodificar)
-    let volta =  parseInt(document.getElementById('offset').value)
-    //console.log(volta)
-    const textDescod = cipher.decode(volta,decodificar);
+    let decodificar = document.getElementById('text').value;
+    decodificar = decodificar.toUpperCase();
+    let desloc =  parseInt(document.getElementById('offset').value);
+    let textDescod = cipher.decode(desloc,decodificar);
     document.getElementById('password').value = `${textDescod}`;
 }

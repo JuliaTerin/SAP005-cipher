@@ -5,7 +5,7 @@
 const cipher = {
  encode: function(offset, codificar){
    if (typeof offset != "number" || typeof codificar != "string"){
-     throw new TypeError()
+     //throw new TypeError()
    }
    else{
    let MsgReturn = "";
@@ -23,7 +23,7 @@ const cipher = {
  },  
   decode: function(offset, decodifica){
   if (typeof offset != "number" || typeof decodifica != "string"){
-      throw new TypeError()
+     // throw new TypeError()
 
   }else{
    let MsgReturn = "";
@@ -31,7 +31,7 @@ const cipher = {
    let firstAscii = 65;    
    for(let cont = 0; cont < decodifica.length; cont ++) {
       const CodB = decodifica.charCodeAt (cont);
-    let recodificado = ((CodB - firstAscii + (lphabetSize -( offset % lphabetSize))) % lphabetSize) + firstAscii;
+    let recodificado = ((CodB - firstAscii - (offset % alphabetSize) + alphabetSize) % alphabetSize) + firstAscii;
     if (CodB <= 64 || CodB >= 91) {
     recodificado = CodB;
     } MsgReturn += String.fromCharCode(recodificado);
