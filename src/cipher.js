@@ -5,7 +5,7 @@
 const cipher = {
  encode: function(offset, codificar){
    if (typeof offset != "number" || typeof codificar != "string"){
-     //throw new TypeError()
+     throw new TypeError()
    }
    else{
    let MsgReturn = "";
@@ -23,7 +23,7 @@ const cipher = {
  },  
   decode: function(offset, decodifica){
   if (typeof offset != "number" || typeof decodifica != "string"){
-     // throw new TypeError()
+     throw new TypeError()
 
   }else{
    let MsgReturn = "";
