@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="roots">
     <div id="fundo1"></div>
     <h1>Secretum</h1>
-    <p>Secretum é onde você pode criptografar suas senhas de acessos em algo que somonte você entenda. Há vários tipos de criptografias, e a Cifra de César é um das primeiras conhecidas na história. O imperador romano Júlio César utilizava essa cifra para enviar ordens secretas aos seus generais no campo de batalha. A cifra de César é uma das técnicas mais simples de cifrar uma mensagem, pois é um tipo de cifra por substituição, em que cada letra do texto original é substituida por outra mais a frente do mesmo alfabeto, após a escolha do deslocamento. Utilize o espaço a baixo para criar suas senhas com a Cifra de César e aumentar sua segurança de uma maneira fácil e inteligente. Caso esqueça o significado original, você também pode descriptografar sua senha.</p>
-    <form id="formulario" method="post" oninput="Crip();" >
+    <p>Secretum é onde você pode criptografar suas senhas de acessos em algo que somonte você entenda. Há vários tipos de criptografias, e a Cifra de César é um das primeiras conhecidas na história. O imperador romano Júlio César utilizava essa cifra para enviar ordens secretas aos seus generais no campo de batalha. A cifra de César é uma das técnicas mais simples de cifrar uma mensagem, pois é um tipo de cifra por substituição, em que cada letra do texto original é substituida por outra mais a frente do mesmo alfabeto, após a escolha do deslocamento. Utilize o espaço a baixo para criar suas senhas codificadas com a Cifra de César e aumentar sua segurança de uma maneira fácil e inteligente. Caso esqueça o significado original, você também pode descodificar sua senha.</p>
+    <form id="formulario" method="post" >
       <div>
-       <label for="msg">Texto:</label>
-        <textarea id="msg"></textarea>
+       <label for="text">Texto:</label>
+        <textarea id="text"></textarea>
        </div>
       <div>
         <label for="password">Senha:</label>
@@ -20,31 +21,20 @@
       </div>
       <div>
        <p><label for="offset">Escolha o deslocamento:</label>
-       <select id="offset" size="1">
-       <option>1</option>
-       <option>2</option>
-       <option>3</option>
-       <option>4</option>
-       <option>5</option>
-       <option>6</option>
-       <option>7</option>
-       </select>
-       const offset = document.getElementById("offset");
+        <input id ="offset" type="number" value min="1" max="20">
        </p>
       </div>
       <div class="button1">
-        <imput>
-        <button id="cod" type="submit">Codificar</button>
-        </imput>
+        
+        <button id="cod" type="button">Codificar</button>
+        
       </div>
       <div class="button2">
-        <imput>
-        <button id="descod" type="submit">Descodificar</button>
-        </imput>
+        
+        <button id="descod" type="button">Descodificar</button>
+        
       </div>
     </form>
-     
-    
     </div>
     <script src="index.js" type="module"></script>
   </body>

@@ -2,16 +2,44 @@
 //cipher.encode(offset, string): offset é o número de posições que queremos mover para a direita no alfabeto e string é a mensagem (texto) que queremos cifrar.
 //cipher.decode(offset, string): offset é o número de posições que queremos mover para a esquerda no alfabeto e string é a mensagem (texto) que queremos decifrar.
 
-
 const cipher = {
-  //encode: function(offset, string)
-  //const firstAscii = 65
-  //const lastAscii = 97
-  //const alphabetSize = 26
+ encode: function(offset, codificar){
+   if (typeof offset != "number" || typeof codificar != "string"){
+     throw new TypeError()
+   }
+   else{
+   let MsgReturn = "";
+   let alphabetSize = 26;
+   let firstAscii = 65;
+   for(let cont = 0; cont < codificar.length; cont ++) {
+      const CodA = codificar.charCodeAt (cont);
+    let codificado = ((CodA - firstAscii + offset) % alphabetSize) + firstAscii;
+    if (CodA <= 64 || CodA >= 91) {
+    codificado = CodA;
+    } MsgReturn += String.fromCharCode(codificado);
+    }
+  return MsgReturn
+    }
+ },  
+  decode: function(offset, decodifica){
+  if (typeof offset != "number" || typeof decodifica != "string"){
+      throw new TypeError()
 
+  }else{
+   let MsgReturn = "";
+   let alphabetSize = 26;
+   let firstAscii = 65;    
+   for(let cont = 0; cont < decodifica.length; cont ++) {
+      const CodB = decodifica.charCodeAt (cont);
+    let recodificado = ((CodB - firstAscii + (lphabetSize -( offset % lphabetSize))) % lphabetSize) + firstAscii;
+    if (CodB <= 64 || CodB >= 91) {
+    recodificado = CodB;
+    } MsgReturn += String.fromCharCode(recodificado);
+
+   }
+     return MsgReturn
+  }
+}
 };
 
 export default cipher;
-
-/*(codigoDaLetra = desloc) % 26 que é o tam do alfabeto
-  ((codigoDaLetraASC - 65 + desloc) % 26) + 65
