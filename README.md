@@ -23,7 +23,7 @@ O projeto consiste na criação de uma aplicação web que criptografe e descrip
 Todo planejamento do projeto foi feito com método Kaban, utilizando o [Trello](https://trello.com/) como ferramenta. Foram desenvolvidos pequenos passos, com incusão de estudos das linguagens utilizadas, durante as duas sprints. O planejamento do layout foi feito em papel.
 
 
-## 3.Processo criativo
+## 3. Processo criativo
 A aplicação chamada *Secretum* (segredo em latim) foi pensada para facilitar a criação de senhas de acesso de maneira simples, visando um público diverso, que fazem uso de aplicações web e que podem tornar qualquer senha usual em uma menssagem criptografada, afim de aumentar sua sgurança.
 Usamos infinitas aplicações nos dias de hoje, cada uma delas exige uma senha para acesso, a aplicação permite que você crie menssagens ou palavras criptografadas, inclusive diferentes codigicações para a mesma palavra, facilitando para os internautas as variações nas criações de senhas, seja qual for a funcionalidade da mesma.
 
@@ -36,3 +36,5 @@ Este projeto foi o primeiro que desenvolvi, sendo assim, houve uma série de per
 O *Secretum* permite que o usuario escreve no campo "texto" a palavra, que deseja codificar. Em seguida é possivel escolher qual o deslocamento das letras do alfabelo desejado, e baseado nisso, após clicar no botão "Codificar", a palavra codificada aparece no campo "Senha" em letras maiúsculas. Para descodificar a mesma, basta copiar a palavra codificada no campo "texto", escolher o mesmo deslocamento das letras do alfabelo, e clicar no botão "Decodificar", que a palavra volta a sua origem no campo "Senha".  
 Neste momento a aplicação aceita letras maiúsculas e minúsculas, sem acentos, caracteres especiais e espaçamento.
 
+
+## Acesse a aplicação aqui: [Secretum](https://juliaterin.github.io/Secretum-SAP005-cipher/)
