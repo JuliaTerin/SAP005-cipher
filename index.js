@@ -2,21 +2,29 @@
 
 import cipher from './cipher.js';
 
-console.log(cipher);
+const buttonCod = document.getElementById('cod')
+buttonCod.addEventListener('click', functionCrip)
 
-const offset = document.getElementById("offset");
-const cripto = document.getElementById("cod").addEventListener("click", functionCrip);
-const descripto = document.getElementById("descod").addEventListener("click", functionDescrip);
-
-function functionCrip(msg,offset) {
-    cont codgerado = toUpperCase(document.getElementById('msg').value);
-    cripOk= //conta
-    document.getElementById('password').value = cripOk;
+function functionCrip(clickCod){ 
+    clickCod.preventDefault();
+    const textValue = document.getElementById('text').value;
+    textValue = textValue.toUppeCase();
+    const desloca = parseInt(document.getElementById('offset').value)
+    let textCodificado = cipher.encode(textValue, desloca);
+    const textoSenha = document.getElementById('password').value = `${textCodificado}`;
+    textoSenha.innerHTML = textCodificado
 }
 
-function functionDescrip() {
-    let Amsg = toUpperCase(document.getElementById('msg').value);
-    cripOk= //conta
-    document.getElementById('password').value = cripOk;
-/*(codigoDaLetra = desloc) % 26 que é o tam do alfabeto
-  ((codigoDaLetraASC - 65 + desloc) % 26) + 65
+const buttonDescode = document.getElementById('descod')
+buttonDescode.addEventListener('click', functionDescrip)
+
+function functionDescrip(clickDescod){
+    clickDescod.preventDefault();
+    const decodificar = document.getElementById('text').value.toUppeCase()
+    decodificar = decodificar.toUppeCase();
+    //console.log(decodificar)
+    let volta =  parseInt(document.getElementById('offset').value)
+    //console.log(volta)
+    const textDescod = cipher.decode(volta,decodificar);
+    document.getElementById('password').value = `${textDescod}`;
+}
