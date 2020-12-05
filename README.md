@@ -1,6 +1,6 @@
 # Secretum
 
-Aplicação simples para codificação de senhas.
+Aplicação simples para codificação e descodificação de senhas, realizado durante o Bootcamp Laboratória - SAP005. 
 
 ## :small_blue_diamond:Índice
 
